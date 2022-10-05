@@ -14,23 +14,27 @@
 
   </head>
   <body>
-    <div class="bg-dark vh-100 d-flex flex-column justify-content-center">
-        <div class="container col-8 px-0">  
-          <div id="CLIOutputDiv" class="vh-60 CLI p-3 output-text"></div> 
-            <div class="CLI">
+    <div class="bg-result vh-100 d-flex flex-column justify-content-center">
+        <div class="container col-8 px-0" id="content">  
+          <div id="CLIOutputDiv" class="CLI output-text"></div> 
+            <!-- <div class="CLI"> -->
               <div id="input">
-                <p class="m-0 output-text p-3">                 <span>User</span>
-                <span> @ </span>
-                <span> UsernoMacBook-Pro % {{CLITextInput}}
-                </span>
-                </p>
+                <!-- <div id="content"> -->
+                  <p class="m-0 vh-10 output-text align-top ">                 
+                  <span>User</span>
+                  <span> @ </span>
+                  <span > UsernoMacBook-Pro % {{CLITextInput}}
+                  </span>
+                  </p>
                 <!-- </div> -->
-                <div class="container input-group py-2 CLI" id="CLITextInput">
+                <!-- </div> -->
+                <div class="input-group py-2 CLI" id="content">
                   <input type="text" v-model ="CLITextInput" v-on:keydown.enter="appendEchoParagraph"
                   class="form-control">
                 </div> 
+                <!-- <div id="CLITextInput" class="vh-10"><p></p></div> -->
               </div> 
-            </div>     
+            <!-- </div>      -->
         </div>
     </div>
   </body>
