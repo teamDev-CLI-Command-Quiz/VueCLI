@@ -15,21 +15,22 @@
   </head>
   <body>
     <div class="bg-dark vh-100 d-flex flex-column justify-content-center">
-            <div id="CLIOutputDiv"></div>
-        <div id="input" class="container col-8 px-0" >        
-            <div class="CLI vh-60">
-                    <p class="m-0 output-text"> 
-                    <span>User</span>
-                    <span> @ </span>
-                    <span >UsernoMacBook-Pro % {{CLITextInput}}
-                    </span>
-                    </p>
+        <div class="container col-8 px-0">  
+          <div id="CLIOutputDiv" class="vh-60 CLI p-3 output-text"></div> 
+            <div class="CLI">
+              <div id="input">
+                <p class="m-0 output-text p-3">                 <span>User</span>
+                <span> @ </span>
+                <span> UsernoMacBook-Pro % {{CLITextInput}}
+                </span>
+                </p>
                 <!-- </div> -->
-            </div>
-            <div class="container input-group py-2 CLI" id="CLITextInput">
-              <input type="text" v-model ="CLITextInput" v-on:keydown.enter="appendEchoParagraph"
-              class="form-control">
-            </div>       
+                <div class="container input-group py-2 CLI" id="CLITextInput">
+                  <input type="text" v-model ="CLITextInput" v-on:keydown.enter="appendEchoParagraph"
+                  class="form-control">
+                </div> 
+              </div> 
+            </div>     
         </div>
     </div>
   </body>

@@ -1,4 +1,5 @@
 let CLITextInput = document.getElementById("CLITextInput");
+let input = document.getElementById("input")
 let CLITextOutputDiv = document.getElementById("CLIOutputDiv");
 
 const app = Vue.createApp({
@@ -10,17 +11,12 @@ const app = Vue.createApp({
             let CLITextOutput = this.CLITextInput
             CLITextOutputDiv.innerHTML += 
                 `
-                <div class="container col-8 px-0">        
-                <div class="CLI">
-                        <p class="m-0 output-text"> 
-                        <span>User</span>
-                        <span>@</span>
-                        <span >UsernoMacBook-Pro % ${this.CLITextInput}
-                        </span>
-                        </p>
-                    <!-- </div> -->
-                </div>
-    
+                    <p class="m-0 output-text"> 
+                    <span>User</span>
+                    <span>@</span>
+                    <span >UsernoMacBook-Pro % ${this.CLITextInput}
+                    </span>
+                    </p>
                 `
                 // + CLITextOutputDiv.innerHTML;
             this.CLITextInput = ""
