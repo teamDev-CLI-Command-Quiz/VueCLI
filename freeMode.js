@@ -25,6 +25,7 @@ const app = Vue.createApp({
                 // + CLITextOutputDiv.innerHTML;
             this.CLITextInput = ""
             console.log(CLITextOutputDiv.innerHTML)
+            CLITextOutputDiv.scrollTop = CLITextOutputDiv.scrollHeight;
         }
     }
 })
