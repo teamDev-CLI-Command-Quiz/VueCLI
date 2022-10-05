@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="freeMode.css">
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+    <title>Command Line Interface</title>
+
+  </head>
+  <body>
+    <div class="bg-dark vh-100 d-flex flex-column justify-content-center">
+            <div id="CLIOutputDiv"></div>
+        <div id="input" class="container col-8 px-0" >        
+            <div class="CLI vh-60">
+                    <p class="m-0 output-text"> 
+                    <span>User</span>
+                    <span> @ </span>
+                    <span >UsernoMacBook-Pro % {{CLITextInput}}
+                    </span>
+                    </p>
+                <!-- </div> -->
+            </div>
+            <div class="container input-group py-2 CLI" id="CLITextInput">
+              <input type="text" v-model ="CLITextInput" v-on:keydown.enter="appendEchoParagraph"
+              class="form-control">
+            </div>       
+        </div>
+    </div>
+  </body>
+</html><!-- CLI Book Lookup Console version -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<body style="background: black">
+<div id="gameDiv" class="vh-100 d-flex flex-column">
+
+</div>
+<script src="freeMode.js"></script>
+</body>
