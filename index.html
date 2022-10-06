@@ -19,8 +19,7 @@
           <div id="CLIOutputDiv" class="CLI output-text"></div> 
             <!-- <div class="CLI"> -->
               <div id="app">
-                <!-- <div id="content"> -->
-                  <p class="m-0 vh-10 output-text align-top ">                 
+                  <p class="m-0 vh-20 output-text">                
                   <span>User</span>
                   <span> @ </span>
                   <span > UsernoMacBook-Pro % {{CLITextInput}}
@@ -28,7 +27,7 @@
                   </p>
                 <!-- </div> -->
                 <!-- </div> -->
-                <div class="input-group py-2 CLI" id="content">
+                <div class="input-group py-2 CLI">
                   <input 
                   type="text" 
                   v-model ="CLITextInput" 
@@ -37,7 +36,7 @@
                   v-on:keydown.down="cursorDownToGetHistories"
                   class="form-control">
                 </div> 
-                <pre class="pre">{{ $data }}</pre>
+                <!-- <pre class="pre">{{ $data }}</pre> -->
                 <!-- <div id="CLITextInput" class="vh-10"><p></p></div> -->
               </div> 
             <!-- </div>      -->
