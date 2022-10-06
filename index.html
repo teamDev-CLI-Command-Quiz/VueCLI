@@ -18,7 +18,7 @@
         <div class="container col-8 px-0" id="content">  
           <div id="CLIOutputDiv" class="CLI output-text"></div> 
             <!-- <div class="CLI"> -->
-              <div id="input">
+              <div id="app">
                 <!-- <div id="content"> -->
                   <p class="m-0 vh-10 output-text align-top ">                 
                   <span>User</span>
@@ -29,9 +29,15 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="input-group py-2 CLI" id="content">
-                  <input type="text" v-model ="CLITextInput" v-on:keydown.enter="appendEchoParagraph"
+                  <input 
+                  type="text" 
+                  v-model ="CLITextInput" 
+                  v-on:keydown.enter="appendEchoParagraph" 
+                  v-on:keydown.up="cursorUpToGetHistories"
+                  v-on:keydown.down="cursorDownToGetHistories"
                   class="form-control">
                 </div> 
+                <pre class="pre">{{ $data }}</pre>
                 <!-- <div id="CLITextInput" class="vh-10"><p></p></div> -->
               </div> 
             <!-- </div>      -->
