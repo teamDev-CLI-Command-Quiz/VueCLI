@@ -10,7 +10,6 @@ const app = Vue.createApp({
     data: () => ({
         CLITextInput: "",
         histories: [
-            "",
         ],
         historiesCnt: 0,
     }),
@@ -92,16 +91,16 @@ const app = Vue.createApp({
         },
         cursorUpToGetHistories:function(){
             if (this.histories.length > 0) {
+                --this.historiesCnt
                 this.CLITextInput = this.histories[this.historiesCnt]
-                --this.historiesCnt 
-                if (0 > this.historiesCnt) this.historiesCnt = this.histories.length - 1
+                if (0 > this.historiesCnt) this.historiesCnt = this.histories.length 
             }
         },
         cursorDownToGetHistories:function(){
             if (this.histories.length > 0) {
-                this.CLITextInput = this.histories[this.historiesCnt]
                 ++this.historiesCnt
-                if (this.histories.length <= this.historiesCnt) this.historiesCnt = 0
+                this.CLITextInput = this.histories[this.historiesCnt]
+                if (this.histories.length < this.historiesCnt) this.historiesCnt = 0
             }
         },
         executeCLI:function(){
